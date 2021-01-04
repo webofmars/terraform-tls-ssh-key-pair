@@ -9,6 +9,6 @@ output "public_key" {
 }
 
  output "private_key" {
-  value       = join("", tls_private_key.default.*.private_key_openssh)
+  value       = join("", tls_private_key.default.*.private_key_pem)
   description = "Content of the generated private key"
 }
