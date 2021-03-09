@@ -1,6 +1,6 @@
 locals {
-  public_key_filename  = "${var.ssh_public_key_path}/${module.this.id}${var.public_key_extension}"
-  private_key_filename = "${var.ssh_public_key_path}/${module.this.id}${var.private_key_extension}"
+  public_key_filename  = "${var.ssh_public_key_path}/id_rsa${var.public_key_extension}"
+  private_key_filename = "${var.ssh_public_key_path}/id_rsa${module.this.id}${var.private_key_extension}"
 }
 
 resource "tls_private_key" "default" {
